@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<route>
+		<object name="com.ptteng.carrots.home.model.Appraisal"
+			listenerClass="" strategyProperty="">
+			
+			
+				<list name="getAppraisalIdsByTalentId" sqlitem="select id from appraisal where talent_id =?"
+				keyProperty="talentId" valueProperty="id" keyColumn="talent_id"/>
+						
+			
+						
+			
+					<list name="getAppraisalIdsAll" sqlitem="select id from appraisal where 1 = 1 order by create_at desc"
+				keyProperty="version" valueProperty="id" keyColumn="version" />
+			
+			<dbStrategy name="mutiDS"
+                clasz="com.gemantic.dal.route.strategy.DefaultStrategy">  <pattern value="[0-9]$" group="carrots_home" />
+            </dbStrategy>
+			
+		</object>
+	</route>
+</dal>

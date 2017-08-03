@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/carrots-zangai.iml" filepath="$PROJECT_DIR$/carrots-zangai.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carrots-zangai-home-core/carrots-zangai-home-core.iml" filepath="$PROJECT_DIR$/carrots-zangai-home-core/carrots-zangai-home-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carrots-zangai-home-service/carrots-zangai-home-service.iml" filepath="$PROJECT_DIR$/carrots-zangai-home-service/carrots-zangai-home-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carrots-zangai-home-web/carrots-zangai-home-web.iml" filepath="$PROJECT_DIR$/carrots-zangai-home-web/carrots-zangai-home-web.iml" />
+    </modules>
+  </component>
+</project>

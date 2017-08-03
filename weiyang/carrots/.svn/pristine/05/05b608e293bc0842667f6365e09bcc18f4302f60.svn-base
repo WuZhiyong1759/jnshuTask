@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<route>
+		<object name="com.ptteng.carrots.home.model.Candidate"
+			listenerClass="" strategyProperty="">
+			
+			
+			
+			<list name="getCandidateIdsByPhone" sqlitem="select id from candidate where phone = ?"
+					keyProperty="phone" valueProperty="id" keyColumn="phone"/>	
+						
+			
+					<list name="getCandidateIdsAll" sqlitem="select id from candidate where 1 = 1 order by create_at desc"
+				keyProperty="version" valueProperty="id" keyColumn="version" />
+			
+			<dbStrategy name="mutiDS"
+                clasz="com.gemantic.dal.route.strategy.DefaultStrategy">  <pattern value="[0-9]$" group="carrots_home" />
+            </dbStrategy>
+			
+		</object>
+	</route>
+</dal>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<list>
+		
+		<config>
+			<path>candidate_dao.xml</path>
+		</config>
+
+		<config>
+			<path>recommend_dao.xml</path>
+		</config>
+		
+		<config>
+			<path>talent_dao.xml</path>
+		</config>	
+		
+		<config>
+			<path>talentProfession_dao.xml</path>
+		</config>	
+		
+		<config>
+			<path>company_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>companyIndustry_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>companyTags_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>product_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>profession_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>professionTags_dao.xml</path>
+		</config>
+
+
+		<config>
+			<path>article_dao.xml</path>
+		</config>
+
+
+		<config>
+			<path>manager_dao.xml</path>
+		</config>
+
+
+		<config>
+			<path>module_dao.xml</path>
+		</config>
+
+
+		<config>
+			<path>role_dao.xml</path>
+		</config>
+
+
+		<config>
+			<path>roleModule_dao.xml</path>
+		</config>
+		
+		
+		<config>
+			<path>appraisal_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>skill_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>talentSkillRelation_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>occupation_dao.xml</path>
+		</config>
+		
+	</list>
+
+	<default>
+		<dbStrategy name=""
+			clasz="com.gemantic.dal.route.strategy.DefaultStrategy">
+			<pattern value="[0-9]$" group="carrots_home" />
+		</dbStrategy>
+		<listenerClass className="" />
+		<idCenterDS ds="idCenterDS" />
+	</default>
+</dal>                

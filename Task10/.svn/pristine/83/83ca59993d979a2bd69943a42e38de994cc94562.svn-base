@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="carrots-zangai-home-core" />
+        <module name="carrots-zangai-home-service" />
+        <module name="carrots-zangai-home-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="carrots-zangai" target="1.5" />
+      <module name="carrots-zangai-home-core" target="1.7" />
+      <module name="carrots-zangai-home-service" target="1.7" />
+      <module name="carrots-zangai-home-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

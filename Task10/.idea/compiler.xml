@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="framework.jnshu" target="1.5" />
+      <module name="Task10" target="1.5" />
+      <module name="task10-home-core" target="1.8" />
+      <module name="task10-home-service" target="1.8" />
+      <module name="task10-home-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

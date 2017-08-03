@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<route>
+		<object name="com.ptteng.carrots.home.model.Talent"
+			listenerClass="" strategyProperty="">
+			
+			
+			
+					<list name="getTalentIdsByPhone" sqlitem="select id from talent where phone = ?"
+					keyProperty="phone" valueProperty="id" keyColumn="phone"/>	
+					
+					
+					<list name="getTalentIdsByTalentLevelAndIsShelve"
+					sqlitem="select id from talent where talent_level=? and is_shelve=?"
+					keyProperty="talentLevel,isShelve" valueProperty="id" keyColumn="talent_level,is_shelve"/>
+			
+						
+			
+					<list name="getTalentIdsAll" sqlitem="select id from talent where 1 = 1 order by create_at desc"
+				keyProperty="version" valueProperty="id" keyColumn="version" />
+			
+			<dbStrategy name="mutiDS"
+                clasz="com.gemantic.dal.route.strategy.DefaultStrategy">  <pattern value="[0-9]$" group="carrots_home" />
+            </dbStrategy>
+			
+		</object>
+	</route>
+</dal>

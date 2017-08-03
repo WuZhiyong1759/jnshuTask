@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- 定义一个基础模板页 -->
+    <definition name="template_base" template="/WEB-INF/layout/template.jsp"></definition>
+
+    <!-- 不继承直接引用也行 -->
+    <definition name="*.*.ptteng" extends="template_base">
+        <put-attribute name="title" value="{2}" />
+        <put-attribute name="headertop" value="/WEB-INF/layout/headertop.jsp" />
+        <put-attribute name="headerdown" value="/WEB-INF/layout/headerdown.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+
+</tiles-definitions>

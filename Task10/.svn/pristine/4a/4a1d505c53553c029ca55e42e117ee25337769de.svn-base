@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.0"
+    xmlns:scallop="http://scallop/xmlns/sca/1.0"
+    targetNamespace="http://CarrotsZangaiComponent" xmlns:sample="http://CarrotsZangaiComponent" name="CarrotsZangaiComponent">
+
+
+  <component name="CarrotsZangaiComponent">
+    <implementation.spring location="META-INF/carrots-zangai-home-service/applicationContext-server.xml" />
+  </component>
+  
+	  <service name="companyService" promote="CarrotsZangaiComponent/companyService">
+    <interface.java interface="com.ptteng.carrots.zangai.service.CompanyService"/> 
+    <scallop:binding.rmi host="localhost" port="10828" serviceName="CompanyRMIService"/>     
+  </service>
+	  <service name="professionService" promote="CarrotsZangaiComponent/professionService">
+    <interface.java interface="com.ptteng.carrots.zangai.service.ProfessionService"/> 
+    <scallop:binding.rmi host="localhost" port="10828" serviceName="ProfessionRMIService"/>     
+  </service>
+	  <service name="producterService" promote="CarrotsZangaiComponent/producterService">
+    <interface.java interface="com.ptteng.carrots.zangai.service.ProducterService"/> 
+    <scallop:binding.rmi host="localhost" port="10828" serviceName="ProducterRMIService"/>     
+  </service>
+	  <service name="companyLabelService" promote="CarrotsZangaiComponent/companyLabelService">
+    <interface.java interface="com.ptteng.carrots.zangai.service.CompanyLabelService"/> 
+    <scallop:binding.rmi host="localhost" port="10828" serviceName="CompanyLabelRMIService"/>     
+  </service>
+	  <service name="articleService" promote="CarrotsZangaiComponent/articleService">
+    <interface.java interface="com.ptteng.carrots.zangai.service.ArticleService"/> 
+    <scallop:binding.rmi host="localhost" port="10828" serviceName="ArticleRMIService"/>     
+  </service>
+	  <service name="professionLabelService" promote="CarrotsZangaiComponent/professionLabelService">
+    <interface.java interface="com.ptteng.carrots.zangai.service.ProfessionLabelService"/> 
+    <scallop:binding.rmi host="localhost" port="10828" serviceName="ProfessionLabelRMIService"/>     
+  </service>
+	
+	
+	 
+  
+	
+
+
+</composite>
+

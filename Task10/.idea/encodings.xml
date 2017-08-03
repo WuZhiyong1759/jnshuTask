@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/carrots-zangai-home-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/carrots-zangai-home-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/carrots-zangai-home-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task10-home-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task10-home-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task10-home-web" charset="UTF-8" />
+  </component>
+</project>

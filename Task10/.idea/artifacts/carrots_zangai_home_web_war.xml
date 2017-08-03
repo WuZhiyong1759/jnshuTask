@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="carrots-zangai-home-web:war">
+    <output-path>$PROJECT_DIR$/carrots-zangai-home-web/target</output-path>
+    <root id="archive" name="carrots-zangai-home-web.war">
+      <element id="artifact" artifact-name="carrots-zangai-home-web:war exploded" />
+    </root>
+  </artifact>
+</component>

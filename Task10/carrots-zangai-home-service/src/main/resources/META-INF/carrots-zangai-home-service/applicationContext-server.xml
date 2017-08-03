@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:sca="http://www.springframework.org/schema/sca"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.springframework.org/schema/sca http://www.springframework.org/schema/sca/spring-sca.xsd">
+
+	<context:component-scan base-package="com.ptteng.carrots.zangai" />
+
+	
+		<sca:service name="companyService"
+		type="com.ptteng.carrots.zangai.service.CompanyService" target="companyService" />
+		
+	
+		<sca:service name="professionService"
+		type="com.ptteng.carrots.zangai.service.ProfessionService" target="professionService" />
+		
+	
+		<sca:service name="producterService"
+		type="com.ptteng.carrots.zangai.service.ProducterService" target="producterService" />
+		
+	
+		<sca:service name="companyLabelService"
+		type="com.ptteng.carrots.zangai.service.CompanyLabelService" target="companyLabelService" />
+		
+	
+		<sca:service name="articleService"
+		type="com.ptteng.carrots.zangai.service.ArticleService" target="articleService" />
+		
+	
+		<sca:service name="professionLabelService"
+		type="com.ptteng.carrots.zangai.service.ProfessionLabelService" target="professionLabelService" />
+		
+	
+		
+	
+	 
+	
+	
+
+
+	
+
+
+
+	
+		
+	<bean id="companyService"
+		class="com.ptteng.carrots.zangai.service.impl.CompanyServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="professionService"
+		class="com.ptteng.carrots.zangai.service.impl.ProfessionServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="producterService"
+		class="com.ptteng.carrots.zangai.service.impl.ProducterServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="companyLabelService"
+		class="com.ptteng.carrots.zangai.service.impl.CompanyLabelServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="articleService"
+		class="com.ptteng.carrots.zangai.service.impl.ArticleServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="professionLabelService"
+		class="com.ptteng.carrots.zangai.service.impl.ProfessionLabelServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+
+<bean id="dao" class="com.gemantic.dal.dao.impl.CompositeDaoImpl" />
+
+	<bean id="baseDaoService"
+		class="com.ptteng.common.dao.BaseDaoServiceImpl">
+		<property name="dao" ref="dao" />
+	</bean>
+
+
+
+
+
+
+	<!-- performance -->
+	<aop:aspectj-autoproxy />
+	<bean id="aroundLoggingTime" class="com.gemantic.common.stat.aop.time.AroundTimeConsume" />
+	<aop:config>
+		<aop:aspect ref="aroundLoggingTime">
+			<aop:pointcut id="publicServiceMethod"
+				expression="execution(* com.gemantic..service.*.*(..)) " />
+			<aop:around method="around" pointcut-ref="publicServiceMethod" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>
+
